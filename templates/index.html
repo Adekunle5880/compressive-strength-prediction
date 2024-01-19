@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compression Strength Prediction of Termite Mound Concrete (TMD)</title>
+    <!-- You can add CSS or link to a stylesheet for styling -->
+</head>
+
+<body>
+    <div class="container">
+        <h2>Compression Strength Prediction of Termite Mound Concrete (TMD)</h2>
+
+        <form action="/predict" method="post">
+            <label for="age">Age (days):</label>
+            <input type="number" id="age" name="age" required><br><br>
+
+            <label for="weight_fine_aggregate">Weight of Fine Aggregate:</label>
+            <input type="number" id="weight_fine_aggregate" name="weight_fine_aggregate" step="0.01" required><br><br>
+
+            <label for="weight_cement">Weight of Cement:</label>
+            <input type="number" id="weight_cement" name="weight_cement" step="0.01" required><br><br>
+
+            <label for="percentage_tmd">percentage of Termite Mound Concrete (TMD):</label>
+            <input type="number" id="percentage_tmd" name="percentage_tmd" step="0.01" required><br><br>
+
+            <label for="weight_tmd">weight of Termite Mound Concrete (TMD):</label>
+            <input type="number" id="weight_tmd" name="weight_tmd" step="0.01" required><br><br>
+
+            <label for="weight_coarse_aggregate">Weight of Coarse Aggregate:</label>
+            <input type="number" id="weight_coarse_aggregate" name="weight_coarse_aggregate" step="0.01" required><br><br>
+
+            <label for="compaction_count">Compaction Count:</label>
+            <input type="number" id="compaction_count" name="compaction_count" required><br><br>
+
+            <label for="slump_result">Slump Result:</label>
+            <input type="number" id="slump_result" name="slump_result" step="0.01" required><br><br>
+
+            <label for="density_cube">Density of Cube:</label>
+            <input type="number" id="density_cube" name="density_cube" step="0.01" required><br><br>
+
+            <input type="submit" value="Predict">
+        </form>
+
+        <!-- Display prediction result -->
+        <h3>{{ prediction_text }}</h3>
+    </div>
+</body>
+
+</html>
